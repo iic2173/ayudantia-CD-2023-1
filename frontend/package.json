@@ -7,7 +7,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy": "yarn generate && aws s3 sync .output/public s3://ayudantia.cd.test --delete"
+    "deploy": "yarn generate && aws s3 sync .output/public s3://capsula.cd --delete"
   },
   "devDependencies": {
     "@types/node": "^18",

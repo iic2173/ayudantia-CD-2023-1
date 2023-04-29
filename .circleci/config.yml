@@ -1,27 +1,3 @@
 version: 2.1
 
-orbs:
-  node: circleci/node@4.7
-
-jobs:
-  build-test-deploy:
-    working_directory: ~/ayudantia_cd/frontend
-    docker:
-      - image: cimg/python:3.10.7-node
-    steps:
-      - checkout:
-          path: ~/ayudantia_cd
-      - run: python --version
-      - run: pip --version
-      - node/install-packages:
-          pkg-manager: yarn
-      - run: yarn test
-      - run: pip install awscli --upgrade
-      - run: aws --version
-      - run: aws s3 ls
-      - run: yarn run deploy
-
-workflows:
-  deploy-to-s3:
-    jobs:
-      - build-test-deploy
+# Usar su propia configuración
